@@ -22,23 +22,18 @@
     height: calc(100vh - 48px);
     min-height: 300px;
     box-shadow: 0px 22px 30px 0px rgba(89, 82, 182, 0.2);
-    border-radius: 1rem;
-    margin: auto;
     /* position: fixed; */
     /* right: 50%; */
     /* left: 50%; */
+    width: 100%;
     flex-direction: column;
-    width: 402px;
+
 
     /* clip-path: circle(0% at 100% 100%); */
   }
 
   .chat-box-header {
-    background: linear-gradient(
-      135deg,
-      rgb(42, 39, 218) 0%,
-      rgb(0, 162, 255) 100%
-    );
+    background: rgb(32, 32, 32);
     width: 100%;
     height: 100px;
     flex: 0 0 auto;
@@ -57,7 +52,7 @@
     background-color: rgba(197, 190, 190, 0.664);
   }
   .chat-box-content::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, rgb(42, 39, 218), rgb(33, 172, 207));
+    background: rgb(32, 32, 32);
     border-radius: 50px;
     cursor: pointer;
   }
@@ -76,12 +71,13 @@
     font-size: 16px;
     resize: none;
     line-height: 24px;
-    overflow: hidden;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     padding-top: 8px;
     padding-left: 7px;
-    margin-left: -10px;
+    width: 90%;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   #text-box:focus {
     border: 0px;
@@ -115,11 +111,7 @@
     border-bottom-color: rgb(163, 169, 179);
   }
   .send {
-    background: linear-gradient(
-      135deg,
-      rgb(42, 39, 218) 0%,
-      rgb(33, 172, 207) 100%
-    );
+    background: rgb(32, 32, 32);;
     margin-left: auto;
     color: white;
     padding-right: 11px;
@@ -135,8 +127,8 @@
     max-width: 90%;
   }
   .file-and-smile-icons {
-    width: 6%;
-    fill: rgb(42, 39, 218);
+    width: 30px;
+    fill: rgb(32, 32, 32);;
     padding-top: 20px;
     padding-left: 20px;
     margin-top: 5px;
@@ -144,17 +136,17 @@
     cursor: pointer;
   }
   .submit-button {
-    width: 9%;
+    width: 30px;
     fill: white;
-    background: rgb(42, 39, 218);
+    background: rgb(32, 32, 32);;
     border: none;
     padding: 8px;
-    box-shadow: 1px 1px 6px blue;
+    box-shadow: 1px 1px 6px rgb(32, 32, 32);;
     border-radius: 50%;
     float: right;
     cursor: pointer;
     margin-top: -23px;
-    margin-right: 12px;
+    margin-right: 40px;
   }
   .poweredby {
     color: darkgray;
@@ -172,6 +164,7 @@
   .employee {
     width: 60px;
     height: 60px;
+    fill: white;
     /* padding-top: 15px; */
     /* padding-left: 25px; */
     margin-top: 20px;
@@ -213,7 +206,7 @@
     fill: whitesmoke;
   }
   .chat-button {
-    box-shadow: 1px 1px 10px 1px rgb(39, 39, 160);
+    box-shadow: 1px 1px 10px 1px rgb(32, 32, 32);
     border-radius: 35%;
     fill: white;
     border: none;
@@ -223,7 +216,7 @@
     height: 2rem;
     width: 2rem;
     padding: 10px;
-    background-color: #5200ff;
+    background-color: rgb(32, 32, 32);
     cursor: pointer;
   }
 
@@ -251,20 +244,16 @@
   }
 
   .contact {
-      position: relative;
+    position: relative;
     padding: 5px;
     margin-bottom: 4px;
     border-radius: 15px;
     overflow-wrap: break-word;
     /* width: 100%; */
-    font-size: 16px;
-    margin-right: auto;
-    padding-right: 11px;
-    background: linear-gradient(
-      135deg,
-      rgb(42, 39, 218) 0%,
-      rgb(33, 172, 207) 100%
-    );
+    font-size: 18px;
+    margin: 20px;
+    padding: 15px;
+    background: rgb(32, 32, 32);
     margin-left: auto;
     color: white;
     max-width: 95%;
@@ -273,6 +262,7 @@
   .contact_name{
       position: relative;
       padding-left: 60px;
+      margin-left: 30px;
       top:-6px ;
   }
 
@@ -280,6 +270,7 @@
       width: 50px;
       position: absolute;
       height: 50px;
+      margin-left: 10px;
       border-radius: 50%;
   }
   .contact_last_chat{

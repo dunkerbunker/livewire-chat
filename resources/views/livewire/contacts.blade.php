@@ -5,7 +5,7 @@
             <path
                 d="m14.6 21.3c-.3.226-.619.464-.89.7h2.29a1 1 0 0 1 0 2h-4a1 1 0 0 1 -1-1c0-1.5 1.275-2.456 2.4-3.3.75-.562 1.6-1.2 1.6-1.7a1 1 0 0 0 -2 0 1 1 0 0 1 -2 0 3 3 0 0 1 6 0c0 1.5-1.275 2.456-2.4 3.3zm8.4-6.3a1 1 0 0 0 -1 1v3h-1a1 1 0 0 1 -1-1v-2a1 1 0 0 0 -2 0v2a3 3 0 0 0 3 3h1v2a1 1 0 0 0 2 0v-7a1 1 0 0 0 -1-1zm-10-3v-5a1 1 0 0 0 -2 0v4h-3a1 1 0 0 0 0 2h4a1 1 0 0 0 1-1zm10-10a1 1 0 0 0 -1 1v2.374a12 12 0 1 0 -14.364 17.808 1.015 1.015 0 0 0 .364.068 1 1 0 0 0 .364-1.932 10 10 0 1 1 12.272-14.318h-2.636a1 1 0 0 0 0 2h3a3 3 0 0 0 3-3v-3a1 1 0 0 0 -1-1z" />
         </svg>
-        <div class="employee-name">Zee Chat</div>
+        <div class="employee-name">Livewire chat app</div>
         <div class="top-right-menu-icons">
            <a href="{{ route('dashboard') }}">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -13,8 +13,8 @@
             </svg>
            </a>
         </div>
-        <div class="top-right-menu-last-icons" id="close-chat">
-            <a href="https://github.com/tauseedzaman">
+        <div class="top-right-menu-icons" id="close-chat">
+            <a href="https://github.com/dunkerbunker">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="m20 8a8 8 0 1 0 -14 5.274v8.226a2.5 2.5 0 0 0 4.062 1.952l1.626-1.3a.5.5 0 0 1 .624 0l1.626 1.3a2.5 2.5 0 0 0 4.062-1.952v-8.226a7.957 7.957 0 0 0 2-5.274zm-8-6a6 6 0 1 1 -6 6 6.006 6.006 0 0 1 6-6zm3.717 19.948a.491.491 0 0 1 -.529-.06l-1.626-1.3a2.49 2.49 0 0 0 -3.124 0l-1.625 1.3a.5.5 0 0 1 -.813-.388v-6.582a7.935 7.935 0 0 0 8 0v6.582a.487.487 0 0 1 -.283.448z"/>
                 </svg>
@@ -27,7 +27,7 @@
                 @if ($user->user->id != auth()->id())
                     <a href="{{ route('chat_with', $user->user->uuid) }}">
                         <div class="contact">
-                            <img class="contact_image" src="{{ $user->user->image }}" alt="" />
+                            <img class="contact_image" src="{{ asset('uploads/'.$user->user->image) }}" alt="" />
                             <p class="contact_name">{{ $user->user->name }}</p>
                             <div class="contact_last_chat_time">{{ $user->created_at->format('H:m') }}</div>
                         </div>

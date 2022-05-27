@@ -42,15 +42,21 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->uuid = Str::uuid();
+        $user->password = Hash::make($request->password);
 
-        $image = $request->file('image')->store('avatars','public');
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'image' => 'storage/'.$image,
-            'uuid' => Str::uuid(),
-            'password' => Hash::make($request->password),
-        ]);
+        if($request->hasFile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/', $filename);
+            $user->image = $filename;
+        }
+
+        $user->save();
 
         event(new Registered($user));
 

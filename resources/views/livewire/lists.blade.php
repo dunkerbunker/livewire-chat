@@ -6,7 +6,7 @@
             <li class="bg-green-500 " style=" margin-top: 10px; ">
                 <div class=" p-3 shadow bg-red-600 flex">
                     <div class=" flex flex-shrink">
-                        <img class="w-20 h-20  " style="border-radius:50% " src="{{ $user->image }}" alt="" />
+                        <img class="w-20 h-20  " style="border-radius:50% " src="{{ asset('uploads/'.$user->image) }}" alt="" />
                     </div>
                     <p style="padding:30px"><b>{{ $user->name }}</b></p>
                     <a href="{{ route('chat_with', $user->uuid) }}" class="float-right ml-auto">
