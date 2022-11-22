@@ -67,6 +67,7 @@
         textContentScroll = document.getElementsByClassName('chat-box-content')[0];
         textContentScroll.scrollTop = textContentScroll.scrollHeight;
 
+
         let textContent = document.getElementsByClassName('conversation-group')[0];
         let textbox = document.querySelector("#text-box");
         textbox.addEventListener('keypress', function(e) {
