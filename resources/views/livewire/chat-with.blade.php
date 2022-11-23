@@ -63,6 +63,7 @@
             <!-- </div> -->
         </div>
     </div>
+    
     <script>
         textContentScroll = document.getElementsByClassName('chat-box-content')[0];
         textContentScroll.scrollTop = textContentScroll.scrollHeight;
